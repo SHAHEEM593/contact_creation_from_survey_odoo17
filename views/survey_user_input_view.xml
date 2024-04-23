@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="survey_user_input_view" model="ir.ui.view">
+        <field name="name">Contacts</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='access_token']" position="after">
+                <field name="contact_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
